@@ -1,18 +1,29 @@
 import React, { Component} from 'react';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import NavBar from './components/NavBar'
+import Header from './components/Header';
+import Footer from './components/Footer';
+import NavBar from './components/NavBar';
+import Home from './components/Home';
+import About from './components/About';
+import Form from './components/Form';
+
+
 class App extends Component {
   render() {
     return (
       <Router>
+        <Header />
         <NavBar />
-      <div>
-          <h1>Hello World!</h1>
-      </div>
+        <Switch>
+          <Route exact path="/" component={ Home } />
+          <Route exact path="/about" component={ About } />
+          <Route exact path="/new" component={ Form } />
+        </Switch>
+        <Footer />  
       </Router>
+
     )
   }
 }
 
 export default App
-
