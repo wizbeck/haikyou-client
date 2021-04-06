@@ -6,6 +6,7 @@ import NavBar from './components/NavBar';
 import Home from './components/Home';
 import About from './components/About';
 import Form from './components/Form';
+import ErrorPage from './components/ErrorPage'
 
 
 class App extends Component {
@@ -18,6 +19,7 @@ class App extends Component {
           <Route exact path="/" component={ Home } />
           <Route exact path="/about" component={ About } />
           <Route exact path="/new" component={ Form } />
+          <Route component={ErrorPage} />
         </Switch>
         <Footer />  
       </Router>
