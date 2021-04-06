@@ -4,7 +4,7 @@ export class Footer extends Component {
   render() {
     return (
       <div>
-        &copy; FakeCopyRight Just for Show 
+        &copy; Haikyou Project Demo, 2021
       </div>
     )
   }

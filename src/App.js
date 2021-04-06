@@ -1,5 +1,6 @@
 import React, { Component} from 'react';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import { connect } from 'react-redux';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import NavBar from './components/NavBar';
@@ -8,10 +9,26 @@ import About from './components/About';
 import Form from './components/Form';
 import Poems from './components/Poems';
 import ErrorPage from './components/ErrorPage'
+import { getPoems } from './actions'
+
 
 
 class App extends Component {
+
+
+  componentDidMount(){
+    this.props.getPoems();
+  }
+
   render() {
+
+    if (this.props.loading) {
+      return (
+        <h2>Loading data...</h2>
+      )
+    }
+
+
     return (
       <Router>
         <Header />
@@ -30,4 +47,10 @@ class App extends Component {
   }
 }
 
-export default App
+const mapStateToProps = state => {
+  return {
+    loading: state.loading
+  }
+}
+
+export default connect(mapStateToProps, { getPoems })(App);
