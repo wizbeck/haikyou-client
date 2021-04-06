@@ -6,4 +6,3 @@ export const getPoems = () => {
     .then(poems => {dispatch({ type: "SET_POEMS", poems })})
   }
 };
-
