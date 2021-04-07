@@ -24,11 +24,6 @@ const poemsReducer = (state = initState, action) => {
         poems: [...state.poems, action.poem]
       }
 
-      // case "SEARCH_POEMS_BY_AUTHOR":
-      //   const poemsByAuthor = [...state.poems].filter(poem => poem.author.includes(action.text))
-      //   return {
-      //     ...state,
-      //   }
 
     default:
       return state;
