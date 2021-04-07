@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
-
+import { addPoem } from '../actions';
 
 class Form extends Component {
   state = {
@@ -21,8 +21,10 @@ class Form extends Component {
     });
   }
 
+  //handle form submission post to database, reset component's state
   handleSubmit = e => {
     e.preventDefault();
+    this.props.addPoem(this.state, this.props.history) //addBlogs is passed via mapDispatchToProps using connect, history object comes from react-router-dom form is a child of router so it is passed down
     console.log(this.state)
     this.setState({
       title: '',
@@ -56,4 +58,4 @@ class Form extends Component {
   }
 }
 
-export default connect()(Form);
+export default connect(null, { addPoem })(Form);

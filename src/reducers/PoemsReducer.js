@@ -17,11 +17,11 @@ const poemsReducer = (state = initState, action) => {
         poems: action.poems
       }
 
-    // case "ADD_POEM":
-    //   return {
-    //     ...state,
-    //     poems: [...state.poems, poem]
-    //   }
+    case "ADD_POEM":
+      return {
+        ...state,
+        poems: [...state.poems, action.poem]
+      }
 
     default:
       return state;
