@@ -37,8 +37,8 @@ class App extends Component {
           <Route exact path="/"><Home /></Route>
           <Route exact path="/about" component={ About } />
           <Route exact path="/haikus" component={ Poems } />
-          <Route exact path="/new" component={ Form } />
-          <Route component={ErrorPage} />
+          <Route exact path="/haikus/new" component={ Form } />
+          <Route component={ ErrorPage } />
         </Switch>
         <Footer />  
       </Router>

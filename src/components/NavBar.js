@@ -8,7 +8,7 @@ class NavBar extends Component {
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
         <Link to="/haikus">All Haikus</Link>
-        <Link to="/new">New Haiku</Link>
+        <Link to="/haikus/new">New Haiku</Link>
       </div>
     )
   }
