@@ -26,3 +26,10 @@ export const addPoem = (poem, history) => {
       })
   }
 }
+
+
+export const searchPoemsByAuthor = text => {
+  return dispatch => {
+  dispatch({type: "SEARCH_POEMS_BY_AUTHOR", text })
+  }
+}

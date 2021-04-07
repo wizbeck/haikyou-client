@@ -1,6 +1,7 @@
 const initState = {
   poems: [],
   loading: true,
+  text:''
 }
 
 const poemsReducer = (state = initState, action) => {
@@ -22,6 +23,12 @@ const poemsReducer = (state = initState, action) => {
         ...state,
         poems: [...state.poems, action.poem]
       }
+
+      // case "SEARCH_POEMS_BY_AUTHOR":
+      //   const poemsByAuthor = [...state.poems].filter(poem => poem.author.includes(action.text))
+      //   return {
+      //     ...state,
+      //   }
 
     default:
       return state;
