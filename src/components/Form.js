@@ -23,7 +23,14 @@ class Form extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    debugger
+    console.log(this.state)
+    this.setState({
+      title: '',
+      line_1: '',
+      line_2: '',
+      line_3: '',
+      author: ''
+    })
   }
 
 
@@ -31,7 +38,7 @@ class Form extends Component {
     return (
       <div>
         <h3>Create your Haiku</h3>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <input onChange={this.handleOnChange} type="text" name="title" placeholder="enter title..." value={this.state.title}/>
           <br /><br />
           <input  onChange={this.handleOnChange} ype="text" name="line_1" placeholder="first line 5 syllables" value={this.state.line_1} />

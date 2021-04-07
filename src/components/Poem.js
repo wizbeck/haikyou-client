@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 class Poem extends Component {
   render() {
-    const {title, line_1, line_2, line_3, author} = this.props
+    const {title, line_1, line_2, line_3, author, likes} = this.props
 
     return (
       <div>
@@ -11,6 +11,7 @@ class Poem extends Component {
         <p>{ line_2 }</p>
         <p>{ line_3 }</p>
         <span> - { author }</span>
+        {/* add likes later */}
       </div>
     )
   }

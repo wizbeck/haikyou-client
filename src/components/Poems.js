@@ -4,7 +4,7 @@ import Poem from './Poem'
 
 class Poems extends Component {
   render() {
-    const poems = this.props.poems.map((poem, i) => <Poem key={i} title={poem.title} line_1={poem.line_1} line_2={poem.line_2} line_3={poem.line_3} author={poem.author} />);
+    const poems = this.props.poems.map((poem, i) => <Poem key={i} title={poem.title} line_1={poem.line_1} line_2={poem.line_2} line_3={poem.line_3} author={poem.author} likes={poem.likes}/>);
     return (
       <div>
         { poems }
