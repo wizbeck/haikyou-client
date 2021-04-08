@@ -20,7 +20,7 @@ class Poems extends Component {
   }
   render() {
     const filteredPoems = this.props.poems.filter((poem) => {
-      return poem.title.includes(this.state.search)
+      return poem.author.includes(this.state.search)
     });
     const poems = filteredPoems.map((poem, i) => <Poem key={i} title={poem.title} line_1={poem.line_1} line_2={poem.line_2} line_3={poem.line_3} author={poem.author} likes={poem.likes}/>);
     return (

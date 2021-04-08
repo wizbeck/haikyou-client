@@ -21,7 +21,7 @@ const poemsReducer = (state = initState, action) => {
     case "ADD_POEM":
       return {
         ...state,
-        poems: [...state.poems, action.poem]
+        poems: [action.poem, ...state.poems]
       }
 
 
