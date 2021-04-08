@@ -2,7 +2,7 @@ import React, { Component} from 'react';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import { connect } from 'react-redux';
 import Header from './components/Header';
-import Footer from './components/Footer';
+import StickyFooter from './components/StickyFooter'
 import NavBar from './components/NavBar';
 import Home from './components/Home';
 import About from './components/About';
@@ -39,8 +39,8 @@ class App extends Component {
           <Route exact path="/haikus" component={ Poems } />
           <Route exact path="/haikus/new" component={ Form } />
           <Route component={ ErrorPage } />
-        </Switch>
-        <Footer />  
+        </Switch> 
+        <StickyFooter /> 
       </Router>
 
     )
