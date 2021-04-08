@@ -26,7 +26,6 @@ class Poems extends Component {
     return (
       <div>
         <input type="text" className="search" name="search" placeholder="search by author" onChange={this.updateSearch} value={this.state.search}/>
-        
         { poems }
       </div>
     )
