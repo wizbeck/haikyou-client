@@ -1,13 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class ErrorPage extends Component {
-  render() {
-    return (
-      <div>
-        <h2> Uh Oh! Looks like you went to an incorrect route!</h2>
-      </div>
-    )
-  }
+export default function ErrorPage() {
+  return (
+    <div className="error">
+      <h2> Uh Oh! Looks like you went to an incorrect route!</h2>
+    </div>
+  )
 }
-
-export default ErrorPage

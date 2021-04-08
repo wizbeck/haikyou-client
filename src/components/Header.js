@@ -1,13 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class Header extends Component {
-  render() {
-    return (
-      <div>
-        <span>HAIKYOU</span>
-      </div>
-    )
-  }
+export default function Header() {
+  return (
+    <div className="banner">
+      HAIKYOU
+    </div>
+  )
 }
-
-export default Header

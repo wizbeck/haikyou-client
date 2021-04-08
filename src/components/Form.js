@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import { addPoem } from '../actions';
 
+
 class Form extends Component {
   state = {
     title: '',
@@ -38,9 +39,9 @@ class Form extends Component {
 
   render() {
     return (
-      <div>
+      <div className="form-container">
         <h3>Create your Haiku</h3>
-        <form onSubmit={this.handleSubmit}>
+        <form className="create-form" onSubmit={this.handleSubmit}>
           <input onChange={this.handleOnChange} type="text" name="title" placeholder="enter title..." value={this.state.title}/>
           <br /><br />
           <input  onChange={this.handleOnChange} ype="text" name="line_1" placeholder="first line 5 syllables" value={this.state.line_1} />
@@ -51,7 +52,7 @@ class Form extends Component {
           <br /><br />
           <input  onChange={this.handleOnChange} type="text" name="author" placeholder="your name" value={this.state.author}/>
           <br /><br />
-          <input type="submit" value="Post it!" />
+          <input type="submit" id="submit-btn" value="Post it!" />
         </form>
       </div>
     )

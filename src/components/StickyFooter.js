@@ -8,7 +8,6 @@ import Link from '@material-ui/core/Link';
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary">
-      {'Copyright © '}
       <Link color="inherit" href="https://github.com/wizbeck21/haikyou-client">
         HaikYou Project Demo
       </Link>
@@ -42,8 +41,8 @@ export default function StickyFooter() {
       <CssBaseline />
       <footer className={classes.footer}>
         <Container maxWidth="sm">
-          <Typography variant="body1">Haikyou Project Demo by Wesley Beck</Typography>
           <Copyright />
+          <Typography variant="inherit">by Wesley Beck</Typography>
         </Container>
       </footer>
     </div>
