@@ -1,0 +1,32 @@
+.navbar {
+  padding: 14px 16px;
+}
+
+.create-form > input {
+  width: 80%;
+  padding: 5px;
+}
+
+.form-container {
+  text-align: center;
+}
+
+#submit-btn {
+  width: 20%;
+}
+
+.banner {
+  text-align: center;
+
+}
+
+.search {
+  width: 50%;
+  padding: 5px;
+}
+
+.poem {
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+}

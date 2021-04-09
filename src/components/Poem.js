@@ -5,11 +5,11 @@ class Poem extends Component {
     const {title, line_1, line_2, line_3, author } = this.props
 
     return (
-      <div>
+      <div className="poem">
         <h3>{ title }</h3>
-        <p>{ line_1 }</p>
+        <p>{'"'}{ line_1 }</p>
         <p>{ line_2 }</p>
-        <p>{ line_3 }</p>
+        <p>{ line_3 }{'"'}</p>
         <span> - { author }</span>
         {/* add likes later */}
       </div>
