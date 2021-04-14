@@ -22,10 +22,11 @@ class Form extends Component {
     });
   }
 
-  //handle form submission post to database, reset component's state
+  //handle form submission post to database, clear component/local state
   handleSubmit = e => {
     e.preventDefault();
-    this.props.addPoem(this.state, this.props.history) //addBlogs is passed via mapDispatchToProps using connect, history object comes from react-router-dom form is a child of router so it is passed down
+    //addBlogs is passed via mapDispatchToProps using connect, history object comes from react-router-dom form is a child of router so it is passed down
+    this.props.addPoem(this.state, this.props.history)
     console.log(this.state)
     this.setState({
       title: '',
