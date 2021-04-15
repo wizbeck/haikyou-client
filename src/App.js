@@ -33,6 +33,7 @@ class App extends Component {
       <Router>
         <Header />
         <NavBar />
+        <div className="app">
         <Switch>
           <Route exact path="/"><Home /></Route>
           <Route exact path="/about" component={ About } />
@@ -41,6 +42,7 @@ class App extends Component {
           <Route component={ ErrorPage } />
         </Switch> 
         <StickyFooter /> 
+        </div>
       </Router>
 
     )

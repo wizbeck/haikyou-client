@@ -19,14 +19,31 @@
   text-align: center;
 
 }
-
+.poems-container {
+  text-align: center;
+}
 .search {
   width: 50%;
   padding: 5px;
+  margin-top: 20px;
+  margin-bottom: 15px;
 }
+
 
 .poem {
   display: block;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
-  padding: 14px 16px;
+  padding: 16px 16px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 5px;
+  width: 50%;
 }
+
+.app {
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
