@@ -5,10 +5,11 @@ import './App.css';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import {createStore, applyMiddleware} from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 import poemsReducer from './reducers/PoemsReducer'
 
-const store = createStore(poemsReducer, applyMiddleware(thunk))
+const store = createStore(poemsReducer, composeWithDevTools(applyMiddleware(thunk)))
 
 ReactDOM.render(
   <React.StrictMode>

@@ -1,29 +1,35 @@
 import React, { Component } from 'react'
+import {connect} from 'react-redux';
 import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';
 import ThumbUpAltOutlinedIcon from '@material-ui/icons/ThumbUpAltOutlined';
-class Poem extends Component {
 
-  handleClick = (id) => {
+
+class Poem extends Component {
+  
     // add a like to total likes
-    // dispatch action fetch request post to `http://localhost:3000/${id}`
+    // dispatch action fetch request post to `http://localhost:3000/poems/${id}`
     // update state of individual poem when clicking
-  }
+  
+handleLikes = () => {
+  this.props.addLike(this.props.id)
+}
 
   render() {
-    const {id, title, line_1, line_2, line_3, author, likes} = this.props
-
+    const poem = this.props
     return (
       <div className="poem">
-        <h3>{ title }</h3>
-        <p>{'"'}{ line_1 }</p>
-        <p>{ line_2 }</p>
-        <p>{ line_3 }{'"'}</p>
-        <span> - <em>{ author }</em></span>
+        <h3>{ poem.title }</h3>
+        <p>{'"'}{ poem.line_1 }</p>
+        <p>{ poem.line_2 }</p>
+        <p>{ poem.line_3 }{'"'}</p>
+        <span> - <em>{ poem.author }</em></span>
         <br />
-        <span className="poem__likes"><ThumbUpAltIcon onClick={this.handleClick(id)}/> {likes} </span>
+        <span className="poem__likes"><ThumbUpAltIcon onClick={this.handleLikes}/> {poem.likes} </span>
       </div>
     )
   }
 }
 
-export default Poem;
+
+
+export default connect(null)(Poem);

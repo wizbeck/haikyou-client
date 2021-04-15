@@ -27,5 +27,10 @@ export const addPoem = (poem, history) => {
   }
 }
 
-
-
+//increase likes from a specific poem via fetch and to update state
+export const addLike = (id) => {
+  return dispatch => {
+    dispatch({type: "LIKE_POEM", id})
+    console.log(`poem ${id} likes will increment`)
+  }
+}
