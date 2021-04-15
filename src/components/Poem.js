@@ -10,7 +10,7 @@ class Poem extends Component {
         <p>{'"'}{ line_1 }</p>
         <p>{ line_2 }</p>
         <p>{ line_3 }{'"'}</p>
-        <span> - { author }</span>
+        <span> - <em>{ author }</em></span>
         {/* add likes later */}
       </div>
     )
