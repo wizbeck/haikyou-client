@@ -1,14 +1,10 @@
 import React, { Component } from 'react'
-import {connect} from 'react-redux';
 import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';
 
 
 
 class Poem extends Component {
-  state = {
-    ...this.props,
-    likes: this.props.likes
-  }
+  
     // add a like to total likes
     // dispatch action fetch request post to `http://localhost:3000/poems/${id}`
     // update state of individual poem when clicking
@@ -35,4 +31,4 @@ handleLikes = () => {
 
 
 
-export default connect(null)(Poem);
+export default Poem;
