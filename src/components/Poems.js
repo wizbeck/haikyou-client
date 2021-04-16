@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux';
+import {addLike} from '../actions';
 import Poem from './Poem'
 
 class Poems extends Component {
@@ -19,7 +20,7 @@ class Poems extends Component {
     
   }
   render() {
-    console.log(this.props)
+    // console.log(this.props) - to see state mapped as props in console
     const filteredPoems = this.props.poems.filter((poem) => {
       return poem.author.toLowerCase().includes(this.state.search.toLowerCase())
     });
@@ -39,13 +40,6 @@ const mapStateToProps = state => {
   }
 }
 
-const mapDispatchToProps = dispatch => {
-  return {
-    addLike: (id) => {
-      dispatch({type:"LIKE_POEM", id: id})
-    }
-  }
-}
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Poems);
+export default connect(mapStateToProps, { addLike })(Poems);
